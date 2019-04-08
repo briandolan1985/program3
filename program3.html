@@ -1,0 +1,28 @@
+<html>
+<body>
+<head>
+  <h2>Constructors</h2>
+  <p id="constructor"></p>
+
+  <script>
+    //Constructor for Vehicles
+    function Vehicle(make, model, year, color){
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.color = color;
+    }
+
+    //Append three new features
+    Vehicle.prototype.dealership = "Cochran Infiniti";
+    Vehicle.prototype.mileage = "25,000"
+    Vehicle.prototype.neworused = "New"
+
+    var newVehicle = new Vehicle("Infiniti","Q50", 2016, "white");
+    
+    document.getElementById("prototype").innerHTML =
+    "I bought it from " + newVehicle.dealership + " and it has " + newVehicle.mileage + " and it was a " + newVehicle.neworused;
+  </script>
+
+  </body>
+  </html>
